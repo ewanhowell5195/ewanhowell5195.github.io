@@ -1,0 +1,161 @@
+@font-face {
+    font-family: AlteDin;
+    src: url(../fonts/din1451alt.ttf);
+}
+@font-face {
+    font-family: MinecraftSeven;
+    src: url(../fonts/MinecraftSeven.ttf);
+}
+html, body {
+    margin: 0;
+    height:100%;
+    background-color: #253634;
+}
+.banner {
+    background-color: #29403f;
+    padding-top: 40px;
+}
+.buttons {
+    background-color: #29403f;
+    height: 3vw;
+    padding: 10px;
+}
+.spacer {
+    background-color: #29403f;
+    height: 10px;
+}
+.sidebar {
+    background-color: #253634;
+    height: 65vw;
+    min-height:200%;
+    width: 20%;
+    float: left;
+}
+.main {
+    background-color: #23302d;
+    width:60%;
+    float: left;
+}
+.footer {
+    background-color: #1a2420;
+	width:100%;
+	margin:auto;
+	height:40px;
+	clear:both;
+}
+.outer {
+	background-color: #253634;
+	min-height:100%;
+	margin-top:-40px;
+}
+.home{
+    width: 44%;
+    height: 15vw;
+    float: left;
+    padding: 3%
+}
+.pack{
+    width: 33.3%;
+    float: left;
+}
+.home-image, .bannerImg{
+    width: 100%;
+}
+.pack-banner{
+    width: 80%;
+}
+.showcase-img{
+    width: 46%;
+    padding: 1vw;
+}
+.pack-icon{
+    width: 80%;
+    padding: 1vw;
+}
+.pack-icon{
+    width: 50%;
+    padding: 5vw;
+}
+.button {
+    background-color: #ad3535;
+    border:5px solid #000000;
+    color: White;
+    font-family: AlteDin;
+    font-size: 1.3vw;
+    text-align: center;
+    cursor: pointer;
+    height: 3vw;
+    width: 17%;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover {
+    background-color: #c94132;
+}
+.button:active {
+    position:relative;
+    top: 0.2vw;
+}
+.button-selected {
+    background-color: #8f2f3c;
+    border:5px solid #000000;
+    color: white;
+    font-family: AlteDin;
+    font-size: 1.3vw;
+    text-align: center;
+    cursor: not-allowed;
+    height: 3vw;
+    width: 17%;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-selected:hover {
+    background-color: #752937;
+}
+.button-download {
+    background-color: #e29f00;
+    border:5px solid #000000;
+    color: White;
+    font-family: AlteDin;
+    font-size: 1.3vw;
+    text-align: center;
+    cursor: pointer;
+    height: 2vw;
+    width: 20%;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5%;
+}
+.button-download:hover {
+    background-color: #d17600;
+}
+.button-download:active {
+    position:relative;
+    top: 0.2vw;
+}
+p1, a {
+    font-family: AlteDin;
+    color: white;
+    font-size: 1.5vw;
+    line-height: 150%;
+}
+h1 {
+    font-family: MinecraftSeven;
+    color: #e29f00;
+    text-shadow: 0px 6px #381218;
+    font-size: 2vw;
+}
+h2 {
+    font-family: AlteDin;
+    color: white;
+    font-size: 1.5vw;
+}
