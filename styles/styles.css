@@ -63,6 +63,7 @@ html, body {
 }
 .pack-banner{
     width: 80%;
+    padding-top: 1vw;
 }
 .showcase-img{
     width: 46%;
@@ -146,6 +147,12 @@ p1, a {
     font-family: AlteDin;
     color: white;
     font-size: 1.5vw;
+    line-height: 150%;
+}
+p2 {
+    font-family: AlteDin;
+    color: white;
+    font-size: 1vw;
     line-height: 150%;
 }
 h1 {
