@@ -148,6 +148,7 @@ p1, a {
     color: white;
     font-size: 1.5vw;
     line-height: 150%;
+    text-decoration: none;
 }
 p2 {
     font-family: AlteDin;
