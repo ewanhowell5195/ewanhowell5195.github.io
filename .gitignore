@@ -1,10 +1,4 @@
 images/banner/template.psd
-images/banner/resize.py
-images/pack/resize.py
-images/dungeons/resize.py
-images/map/resize.py
-images/pack_icon/resize.py
-images/map_icon/resize.py
-images/dungeons_icon/resize.py
+images/resize.py
 pack/new_pack.py
 debug.log
