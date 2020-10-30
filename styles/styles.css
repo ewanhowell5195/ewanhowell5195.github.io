@@ -18,11 +18,12 @@ html, body {
 .buttons {
     background-color: #29403f;
     height: 3vw;
-    padding: 10px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
 }
 .spacer {
     background-color: #29403f;
-    height: 10px;
+    height: 1vw;
 }
 .sidebar {
     background-color: #253634;
