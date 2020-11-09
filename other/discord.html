@@ -10,27 +10,23 @@
           gtag('config', 'UA-155158328-2');
         </script>
         <title>Ewan Howell - Discord</title>
-        <link rel = "stylesheet" href="styles/styles.css">
-        <link rel="icon" href="images/discord/discord_logo.png">
+        <link rel = "stylesheet" href="../styles/styles.css">
+        <link rel="icon" href="../images/discord/discord_logo.png">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Ewan Howell" />
         <meta property="og:description" content="My Discord Server and Bot links!" />
         <meta property="og:url" content="http://ewanhowell5195.github.io/" />
         <meta property="og:image" content="http://ewanhowell5195.github.io/images/discord/discord_logo.png" />
     </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script> 
+        $(function(){
+            $(".resource_header").load("../header.html"); 
+        });
+    </script>
     <body>
         <div class="outer">
-            <div class="banner">
-                <img class="bannerImg" src="images/logo/ewan_hd_4k.png" alt="EH Banner">
-            </div>
-            <div class="buttons">
-                <center>
-                    <a href="index.html" class="button">Home</a>
-                    <a href="resource.html" class="button">Resource Packs</a>
-                    <a href="map.html" class="button">Maps</a>
-                    <a href="dungeons.html" class="button">Dungeons Mods</a>
-                    <a class="button-selected">Discord</a>
-                </center>
+            <div class="resource_header">
             </div>
             <div class="spacer">
             </div>
@@ -46,7 +42,7 @@
                             <p1>
                                 Ewan's Server
                             </p1>
-                            <img class="pack-banner" src="images/discord/discord.png" alt="Discord">
+                            <img class="pack-banner" src="../images/discord/discord.png" alt="Discord">
                         </a>
                     </div>
                     <div class = "home">
@@ -60,11 +56,11 @@
                         </p1>
                     </div>
                     <div class = "home">
-                        <a href="wynem.html", target="_blank">
+                        <a href="wynem", target="_blank">
                             <p1>
                                 Wynem Discord Bot
                             </p1>
-                            <img class="pack-banner" src="images/discord/wynem.png" alt="Wynem Discord Bot">
+                            <img class="pack-banner" src="../images/discord/wynem.png" alt="Wynem Discord Bot">
                         </a>
                     </div>
                 </center>

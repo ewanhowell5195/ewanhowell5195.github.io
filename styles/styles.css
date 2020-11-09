@@ -90,7 +90,7 @@ html, body {
     text-align: center;
     cursor: pointer;
     height: 3vw;
-    width: 17%;
+    width: 13%;
     transition-duration: 0.2s;
     text-decoration: none;
     display: inline-flex;
@@ -113,7 +113,7 @@ html, body {
     text-align: center;
     cursor: not-allowed;
     height: 3vw;
-    width: 17%;
+    width: 13%;
     transition-duration: 0.2s;
     text-decoration: none;
     display: inline-flex;
@@ -165,6 +165,7 @@ h1 {
     color: #e29f00;
     text-shadow: 0 0.5vw #381218;
     font-size: 2vw;
+    text-align: center
 }
 h2 {
     font-family: AlteDin;
@@ -176,4 +177,23 @@ h2 {
     padding-top: 1vw;
     padding-bottom: 3vw;
     float: left;
+}
+.wrapper{
+    width:50%;
+    height:100%;
+    float: left
+}
+.iframe{
+    position:relative;
+}
+.iframe .ratio{
+    display:block;
+    width:100%;
+}
+.iframe iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
