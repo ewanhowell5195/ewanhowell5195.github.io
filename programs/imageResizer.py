@@ -27,7 +27,7 @@ while passed == False:
 		print("Invalid Fraction")
 
 
-for subdir, dirs, files in walk(f"{rootdir}/assets/"):
+for subdir, dirs, files in walk(rootdir):
 	for file in files:
 
 		if not file.endswith(".png"):
