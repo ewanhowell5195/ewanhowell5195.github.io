@@ -1,0 +1,16 @@
+.sidebar
+.main
+	h1 Maps
+	p2 The version below the name indicates the last version I tested the pack on.
+	.packContent
+		- const siteData = require("../../assets/site.json")
+		for category in siteData.maps
+			h2 #{category.category}
+			.container
+				for map in category.packs
+					.pack
+						a(href=`?map=${map.name}`, onclick=`loadPack("map", "${map.name}", event)`)
+							img.pack-banner(data-src = require(`../../assets/images/banners/${map.name}.png`).default)
+						p1 #{map.displayName}
+						p2 #{map.version}
+.sidebar

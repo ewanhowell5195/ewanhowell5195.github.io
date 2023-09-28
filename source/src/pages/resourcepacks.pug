@@ -1,0 +1,24 @@
+.sidebar
+
+.main
+	h1 Featured Pack
+	.featureContent
+	h1 Resource Packs
+	p2 The version below the name indicates the last version I tested the pack on.
+	br
+	br
+	.search
+		.search-icon(onclick = "this.nextSibling.focus()"): include ../../assets/images/symbols/search.svg
+		input.search-input(placeholder = "search", type = "text", spellcheck = "false", oninput = "processSearch(event)")
+	.packContent
+		- const siteData = require("../../assets/site.json")
+		for category in siteData.resourcepacks
+			h2 #{category.category}
+			.container
+				for pack in category.packs
+					.pack(data-search = `${pack.name}; ${pack.displayName}; ${pack.version}; ${category.category}`)
+						a(href=`?pack=${pack.name}`, onclick=`loadPack("pack", "${pack.name}", event)`)
+							img.pack-banner(data-src = require(`../../assets/images/banners/${pack.name}.png`).default)
+						p1 #{pack.displayName}
+						p2 #{pack.version}
+.sidebar

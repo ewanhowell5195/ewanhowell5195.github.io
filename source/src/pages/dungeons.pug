@@ -1,0 +1,16 @@
+.sidebar
+.main
+	h1 Dungeons Mods
+	br
+	.packContent
+		- const siteData = require("../../assets/site.json")
+		for category in siteData.dungeons
+			h2 #{category.category}
+			.container
+				for dungeon in category.packs
+					.pack
+						a(href=`?dungeon=${dungeon.name}`, onclick=`loadPack("dungeon", "${dungeon.name}", event)`)
+							img.pack-banner(data-src = require(`../../assets/images/banners/${dungeon.name}.png`).default)
+						p1 #{dungeon.displayName}
+						p2 #{dungeon.version}
+.sidebar

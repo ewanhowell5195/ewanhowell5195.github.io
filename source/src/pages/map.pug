@@ -1,0 +1,79 @@
+- const siteData = require("../../assets/site.json")
+for category in siteData.maps
+	for map in category.packs
+		.subpage.hidden(id=map.name, data-display-name = map.displayName, data-favicon = require(`../../assets/images/icons/${map.name}.png`).default)
+			.sidebar
+				img.pack-icon(data-src = require(`../../assets/images/icons/${map.name}.png`).default)
+			.main
+				h1 #{map.displayName}
+				h2 #{map.details.subheading}
+				br
+				br
+				p1.description #{map.details.description}
+				br
+				br
+				br
+				br
+				if map.details.buttons
+					.tab-group
+						.tabs
+							.tab-group-type Downloads
+							.button-tab.selected(data-tab-type = "link", onclick = "tabClickHandler(event)") Links
+							.button-tab(data-tab-type = "mirror", onclick = "tabClickHandler(event)") Mirrors
+						.tab-pages
+							.tab.link
+								for button in map.details.buttons
+									if button.type == "download"
+										a.button-download(target="_blank", href=button.link)
+											.icon: include ../../assets/images/symbols/download.svg
+											span #{button.text}
+									else
+										a.button-download(target="_blank", href=button.link) #{button.text}
+							.tab.mirror.hidden
+								for button in map.details.buttons
+									if button.type == "download"
+										a.button-mirror(target="_blank", href=button.mirror)
+											.icon: include ../../assets/images/symbols/download.svg
+											span #{button.text}
+									else
+										a.button-mirror(target="_blank", href=button.mirror) #{button.text}
+				if map.details.extras
+					.tab-group
+						.tabs
+							.tab-group-type Extras
+							.button-tab.selected(data-tab-type = "link", onclick = "tabClickHandler(event)") Links
+							if map.details.extras.some(e => e.mirror)
+								.button-tab(data-tab-type = "mirror", onclick = "tabClickHandler(event)") Mirrors
+						.tab-pages
+							.tab.link
+								for button in map.details.extras
+									if button.local
+										a.button-download(href=`?${button.type}=${button.name}`, onclick=`loadPack("map", "${button.name}", event)`) #{button.text}
+									if !button.local
+										if button.type == "download"
+											a.button-download(target="_blank", href=button.link)
+												.icon: include ../../assets/images/symbols/download.svg
+												span #{button.text}
+										else
+											a.button-download(target="_blank", href=button.link) #{button.text}
+							if map.details.extras.some(e => e.mirror)
+								.tab.mirror.hidden
+									for button in map.details.extras
+										if !button.local
+											if button.type == "download"
+												a.button-mirror(target="_blank", href=button.mirror)
+													.icon: include ../../assets/images/symbols/download.svg
+													span #{button.text}
+											else
+												a.button-mirror(target="_blank", href=button.mirror) #{button.text}
+					br
+					br
+				if map.details.video
+					h2 Here is a video:
+					iframe(width="560", height="315", data-src=`https://www.youtube.com/embed/${map.details.video}`, frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+				if map.details.images
+					h2 Here are some screenshots:
+					for image in map.details.images
+						img.showcase-img(data-src = require(`../../assets/images/showcase-images/${map.name}/${image}.png`).default)
+			.sidebar
+				img.pack-icon(data-src = require(`../../assets/images/icons/${map.name}.png`).default)

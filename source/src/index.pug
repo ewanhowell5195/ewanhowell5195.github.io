@@ -1,0 +1,61 @@
+doctype html
+html
+	head
+		script(data-ad-client="ca-pub-2999169357819471", async, src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+		script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-155158328-2")
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag("js", new Date());
+			gtag("config", "UA-155158328-2");
+		title Ewan Howell
+		link(rel="icon", type="image/png", sizes="16x16", href=require("../assets/images/logo/eh_16.png").default, data-href = require("../assets/images/logo/eh_16.png").default)
+		link(rel="icon", type="image/png", sizes="32x32", href=require("../assets/images/logo/eh_32.png").default, data-href = require("../assets/images/logo/eh_32.png").default)
+		meta(property="og:type", content="website")
+		meta(property="og:title", content="Ewan Howell")
+		meta(property="og:description", content="ewanhowell.com")
+		meta(property="og:image", content="http://www.ewanhowell.com/assets/images/logo/eh.png")
+		meta(name="theme-color", content="#DF5050")
+		script.
+			window.imageObserver = new IntersectionObserver(function(entries, observer) {
+				entries.forEach(function(entry) {
+					if ("src" in entry.target.dataset) {
+						if (entry.isIntersecting) {
+							entry.target.src = entry.target.dataset.src
+							imageObserver.unobserve(entry.target)
+						}
+					} else {
+						imageObserver.unobserve(entry.target)
+					}
+				})
+			})
+	body
+		img.bannerImg(src=require("../assets/images/logo/eh_banner.png").default)
+		.banner
+			a#homeButton.bannerButton.selected(href="/")
+				.bannerLogo: include ../assets/images/logo/eh.svg
+			a#resourcepacksButton.bannerButton(href="?resourcepacks") Packs
+			a#mapsButton.bannerButton(href="?maps") Maps
+			.bannerDrop
+				.menu
+					a#dungeonsButton(href="?dungeons") Dungeons Mods
+					a#rendersButton(href="?renders") Renders
+					a(target="_blank", href="https://sketchfab.com/ewanhowell5195/models") Models
+					a(target="_blank", href="https://github.com/ewanhowell5195/ewanhowell5195.github.io/releases") Programs
+			.filler
+			a.bannerButton(target="_blank", href="https://www.wynem.com/") Wynem
+			a.bannerButton(target="_blank", href="https://discord.com/invite/pkRxtGw") Discord
+		#content
+			#home.page: include pages/home.pug
+			#resourcepacks.page.hidden: include pages/resourcepacks.pug
+			#pack.page.hidden: include pages/pack.pug
+			#maps.page.hidden: include pages/maps.pug
+			#map.page.hidden: include pages/map.pug
+			#dungeons.page.hidden: include pages/dungeons.pug
+			#dungeon.page.hidden: include pages/dungeon.pug
+			#renders.page.hidden: include pages/renders.pug
+		.footer
+			a.footer-link(target="_blank", href="https://twitter.com/ewanhowell5195/") @ewanhowell5195
+			.filler
+			a.footer-link(target="_blank", href="https://ko-fi.com/ewanhowell") Donate
+			a.footer-link(target="_blank", href="mailto:ewanhowell0@gmail.com") Contact
